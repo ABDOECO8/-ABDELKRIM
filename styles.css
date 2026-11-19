@@ -1489,3 +1489,16 @@ textarea {
   font-weight: 400;
   opacity: 1;
 }
+
+/* about section: remove the large empty gap under the "ABOUT ME" title */
+.intro {
+  margin-top: 0;
+}
+.about .content {
+  padding-top: 1.5rem;
+  align-items: center;
+}
+.about .content .profile1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
