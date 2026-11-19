@@ -603,3 +603,51 @@ html, body {
     flex-wrap: wrap;
   }
 }
+
+/* contact form: comfortable, readable size on tablets and phones */
+.contactme .contact-form-container form {
+  background: rgba(24, 34, 47, 0.6);
+  border: 1px solid rgba(83, 215, 255, 0.25);
+  border-radius: 16px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-sizing: border-box;
+}
+.contactme .contact-form-container input,
+.contactme .contact-form-container textarea {
+  font-size: 1.05rem;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.contactme .contact-form-container textarea { min-height: 170px; }
+.contactme .contact-form-container .sendBtn {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.15rem;
+  padding: 0.9em 1.2em;
+  border-radius: 14px;
+}
+.contactme .contact-form-container .sendBtn span {
+  font-size: 1.1rem !important;
+  width: auto !important;
+  margin-left: .6em;
+}
+.contactme .contact-form-container .sendBtn:hover { padding: 0.9em 1.2em; }
+.contactme .contact-form-container .sendBtn:hover span { scale: 1; font-size: 1.1rem !important; opacity: 1; }
+#formStatus { font-size: 1rem; text-align: center; }
+
+@media (width <= 800px) {
+  .contactme .contact-form-container,
+  .contactme .contact-form-container form { width: 94%; max-width: 600px; }
+  .contactme .contact-form-container form { padding: 1.4rem 1.1rem 1.6rem; }
+  .contactme .contact-form-container input,
+  .contactme .contact-form-container textarea { font-size: 1.1rem; padding: 16px; }
+  .contactme .contact-form-container textarea { min-height: 190px; }
+}
+@media (width <= 503px) {
+  .contactme .contact-form-container,
+  .contactme .contact-form-container form { width: 96%; }
+  .contactme .contact-form-container .sendBtn { font-size: 1.25rem; padding: 1em 1.2em; }
+  .contactme .contact-form-container .sendBtn span { font-size: 1.2rem !important; }
+}
