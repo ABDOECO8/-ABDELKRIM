@@ -1542,3 +1542,26 @@ textarea {
 .education-item {
   animation-range: entry 0% entry 35%;
 }
+
+/* contact: title + centered form only */
+.Con {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: none;
+}
+.contactme .contact-form-container {
+  width: 100%;
+  max-width: 560px;
+  margin: 1.5rem auto 0;
+}
+.contactme .contact-form-container form {
+  width: 100%;
+  max-width: 560px;
+  padding: 1rem 1rem 2rem;
+}
+.contactme .Con {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: none;
+  width: 100%;
+}
