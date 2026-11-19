@@ -1308,3 +1308,197 @@ textarea {
     font-weight: 200;
 
 }
+/* ===== IT infrastructure portfolio additions ===== */
+.skill-groups,
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.skill-group,
+.proj-card {
+  background: rgba(42, 134, 255, 0.08);
+  border: 1px solid rgba(42, 134, 255, 0.35);
+  border-radius: 14px;
+  padding: 1.4rem;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.skill-group:hover,
+.proj-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+  box-shadow: 0 8px 24px rgba(42, 134, 255, 0.25);
+}
+.skill-group h3,
+.proj-card h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+.skill-group h3 i {
+  color: var(--blue);
+  margin-right: 0.4rem;
+}
+.proj-card p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chip {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(42, 134, 255, 0.18);
+  border: 1px solid rgba(42, 134, 255, 0.5);
+  color: #e6f0ff;
+  font-size: 0.85rem;
+}
+.chip-lab {
+  background: transparent;
+  border-style: dashed;
+  color: var(--gray);
+}
+.lang-chips {
+  justify-content: center;
+  margin: 1.5rem auto;
+}
+.exp-icon {
+  font-size: 2.4rem;
+  color: var(--blue);
+  margin-bottom: 0.8rem;
+}
+.exp-list {
+  text-align: left;
+  margin: 1rem 0 0 1.2rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+.exp-list li {
+  margin-bottom: 0.4rem;
+}
+.card-wide {
+  flex: 1 1 100%;
+  max-width: 900px;
+}
+.gradient-cards {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-wide {
+  max-width: 1000px;
+}
+.exp-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+.card-wide .card-description {
+  max-width: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* project names always visible (also on touch screens) */
+.comment {
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to top, rgba(17, 19, 21, 0.9) 0%, rgba(17, 19, 21, 0) 55%);
+}
+.child:hover .comment,
+.box:hover .comment {
+  align-items: center;
+  font-size: 1.3rem;
+  background-color: #111315a1;
+}
+
+/* ===== readability fixes ===== */
+/* sections fade in quickly: tall sections (experience, training, contact) used to stay half transparent */
+.about, .item, .project, .education, .experience, .certifications, .contactme,
+.gradient-cards {
+  animation-range: entry 0% entry 35%;
+}
+/* thicker, brighter text */
+.descPar,
+.descParam {
+  font-weight: 400;
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+.card-title {
+  font-weight: 700;
+  color: #fff;
+}
+.card-span {
+  font-weight: 500;
+  color: #7db8ff;
+}
+.card-description {
+  font-weight: 400;
+  color: #f1f5f9;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.exp-list {
+  color: #f1f5f9;
+  font-weight: 400;
+}
+.education-item p {
+  font-weight: 400;
+  color: #f1f5f9;
+}
+.education-item span {
+  font-weight: 500;
+  color: #cfe0f5;
+}
+.proj-card h3,
+.skill-group h3 {
+  font-weight: 700;
+}
+.proj-card p {
+  color: #f1f5f9;
+  font-weight: 400;
+}
+.chip {
+  color: #fff;
+  font-weight: 500;
+}
+.chip-lab {
+  color: #e2e8f0;
+}
+input,
+textarea {
+  font-weight: 400;
+  border-color: #53d7ff;
+}
+::placeholder {
+  color: #dbe4ee;
+  font-weight: 400;
+  opacity: 1;
+}
+
+/* about section: remove the large empty gap under the "ABOUT ME" title */
+.intro {
+  margin-top: 0;
+}
+.about .content {
+  padding-top: 1.5rem;
+  align-items: center;
+}
+.about .content .profile1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
