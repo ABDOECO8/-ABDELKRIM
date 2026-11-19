@@ -7,41 +7,45 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
-    // Préparer l'objet de paramètres
+    // Paramètres = variables du template EmailJS ({{name}}, {{email}}, {{title}}, {{message}})
     const params = {
-        from_name: name,
-        email_id: email,
-        subject: subject,
+        name: name,
+        email: email,
+        title: subject,
         message: message,
+        time: new Date().toLocaleString()
     };
 
+    const formStatus = document.getElementById("formStatus");
+    const btn = document.getElementById("contactForm").querySelector(".sendBtn");
+    btn.disabled = true;
+
     // Utilisation d'EmailJS pour envoyer l'email
-    emailjs.send("S2Vxs/2@#ls", "8ioS?F@QweDF?", params)
+    emailjs.send("service_0rv26ai", "template_nhi5nmb", params)
     .then(function(response) {
         console.log("SUCCESS!", response.status, response.text);
 
-        const formStatus = document.getElementById("formStatus");
-        formStatus.classList.remove("error");  // Retirer l'erreur si présente
-        formStatus.classList.add("success");   // Ajouter le succès
+        formStatus.classList.remove("error");
+        formStatus.classList.add("success");
         formStatus.innerText = "Your message has been sent successfully.";
-        formStatus.style.display = "block";    // Afficher le message
+        formStatus.style.display = "block";
+        document.getElementById("contactForm").reset();
+        btn.disabled = false;
 
-        // Masquer le message après 5 secondes
         setTimeout(function() {
             formStatus.style.display = "none";
-        }, 5000); // 5000ms = 5 secondes
+        }, 5000);
     }, function(error) {
         console.log("FAILED...", error);
 
-        const formStatus = document.getElementById("formStatus");
-        formStatus.classList.remove("success");  // Retirer le succès si présent
-        formStatus.classList.add("error");       // Ajouter l'erreur
+        formStatus.classList.remove("success");
+        formStatus.classList.add("error");
         formStatus.innerText = "There was an error sending the message. Please try again.";
-        formStatus.style.display = "block";      // Afficher le message
+        formStatus.style.display = "block";
+        btn.disabled = false;
 
-        // Masquer le message après 5 secondes
         setTimeout(function() {
             formStatus.style.display = "none";
-        }, 5000); // 5000ms = 5 secondes
+        }, 5000);
     });
 });
