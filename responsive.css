@@ -373,3 +373,208 @@ h1{
 
 
 
+
+/* ===== mobile rules for the IT infrastructure sections ===== */
+@media (width <= 800px) {
+  .skill-groups,
+  .proj-grid {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  .gradient-cards {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .card,
+  .card-wide {
+    max-width: 100%;
+  }
+  .exp-list {
+    margin-left: 0.8rem;
+  }
+  .container2 {
+    width: 92%;
+  }
+}
+@media (width <= 503px) {
+  .skill-group,
+  .proj-card {
+    padding: 1rem;
+  }
+  .skill-group h3,
+  .proj-card h3 {
+    font-size: 1rem;
+  }
+  .chip {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+  .proj-card p,
+  .exp-list,
+  .card-wide .card-description {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+  .animated-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .career {
+    padding: 1rem;
+  }
+  .education-item h3 {
+    font-size: 0.95rem;
+  }
+  .interests {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer_layer2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .comment {
+    font-size: 0.8rem;
+  }
+}
+
+/* avoid sideways scroll caused by the off-canvas sidebar */
+html, body {
+  overflow-x: hidden;
+}
+
+/* chips must keep their natural size (a global "span" rule shrinks spans on phones) */
+.chip {
+  width: auto !important;
+  padding: 0.3rem 0.8rem !important;
+  font-size: 0.8rem !important;
+}
+.card-span {
+  width: auto;
+}
+
+
+/* ===== all formats: tablet and phone layout fixes ===== */
+@media (width <= 1200px) {
+  .home {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    min-height: 100vh;
+    padding: 7rem 2rem 5rem;
+    gap: 2rem;
+  }
+  .profile {
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+  }
+  .theborder {
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .rightside {
+    width: 310px;
+    height: 310px;
+  }
+  .home .leftside {
+    width: min(100%, 720px);
+    margin-inline: auto;
+  }
+  .socialNetwork {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .about .content {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(94%, 760px);
+    margin-inline: auto;
+    padding: 2rem 1rem;
+  }
+  .about .content .profile1 {
+    margin: 1.5rem auto 0;
+    width: min(100%, 380px);
+    text-align: center;
+  }
+  .about .content .rightside1,
+  .about .content .profile-image {
+    max-width: 100%;
+  }
+  .intro {
+    width: 100%;
+  }
+}
+@media (width <= 800px) {
+  .home {
+    padding: 6rem 1.2rem 4rem;
+  }
+  .profile {
+    width: 300px;
+    height: 300px;
+  }
+  .rightside {
+    width: 270px;
+    height: 270px;
+  }
+}
+@media (width <= 503px) {
+  .home {
+    padding: 5.5rem 1rem 3rem;
+  }
+  .profile {
+    width: 270px;
+    height: 270px;
+  }
+  .rightside {
+    width: 240px;
+    height: 240px;
+  }
+  .leftside button,
+  .home .leftside a {
+    max-width: 100%;
+  }
+  .about .content {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (width <= 340px) {
+  .profile {
+    width: 230px;
+    height: 230px;
+  }
+  .rightside {
+    width: 205px;
+    height: 205px;
+  }
+}
+
+/* headings and contact form on tablets and phones */
+@media (width <= 800px) {
+  .section h1,
+  .about h1,
+  h1.animated-heading {
+    font-size: clamp(1.8rem, 8.5vw, 3.2rem);
+  }
+  .contact-form-container,
+  .contact-form-container form {
+    width: min(92%, 520px);
+    max-width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+  .contact-form-container input,
+  .contact-form-container textarea,
+  .contact-form-container button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .typewriter {
+    max-width: 100%;
+  }
+}
