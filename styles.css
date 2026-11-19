@@ -1502,3 +1502,43 @@ textarea {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* ===== education & certifications: clearer, brighter ===== */
+.education-item {
+  background: #18222f;
+  border: 1px solid rgba(42, 134, 255, 0.35);
+  border-radius: 10px;
+}
+.education-item h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+.education-item p {
+  color: #f1f5f9;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.education-item span {
+  color: #8fc4ff;
+  font-weight: 600;
+}
+.education-item:hover h3 {
+  color: #ffffff;
+}
+.education .animated-heading {
+  color: #5cb8ff;
+  font-weight: 700;
+}
+.education .proj-card {
+  background: #18222f;
+  border-color: rgba(42, 134, 255, 0.5);
+}
+.education .proj-card h3 {
+  color: #fff;
+}
+.education-item {
+  animation-range: entry 0% entry 35%;
+}

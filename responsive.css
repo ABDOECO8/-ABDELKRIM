@@ -578,3 +578,28 @@ html, body {
     max-width: 100%;
   }
 }
+
+/* full name always visible on phones and tablets */
+@media (width <= 800px) {
+  .typewriter,
+  .typewriter h1 {
+    max-width: 100%;
+  }
+  .typewriter h1 {
+    font-size: clamp(0.8rem, 4.6vw, 2rem);
+    letter-spacing: 0.08em;
+  }
+}
+
+/* phone hero: a little more room under the header and balanced buttons */
+@media (width <= 503px) {
+  .home {
+    padding-top: 7rem;
+  }
+  .home .leftside > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+}
